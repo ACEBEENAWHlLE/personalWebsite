@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ace's Personal Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- bottom navigation bar -->
+    <!-- Hidden checkboxes to control modals -->
+    <input type="checkbox" id="contactPopup" hidden>
+    <input type="checkbox" id="aboutPopup" hidden>
+
+    <div class="belownav">
+        <label for="aboutPopup">About</label>
+        <label for="contactPopup">Contact</label>
+
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <label for="contactPopup" class="close-btn">&times;</label>
+            <h2>Get In Touch</h2>
+            <p>Email: <a href="acevillanuevaestrella1111@gmail.com">acevillanuevaestrella1111@gmail.com</a></p>
+            <p>Phone: (+63)945-267-8706</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ace-estrella-1a4a88367/"> Ace Estrella</a></p>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <label for="aboutPopup" class="close-btn">&times;</label>
+            <h2>✨About Me✨</h2>
+            <p style="text-align: justify;">Hi! I'm Ace Estrella—a BS Math student with a Computer Science
+                specialization at Bulacan State University. I love mixing logic and creativity, whether coding a web
+                application or creating something visual. I adore editing videos, logos, posters, infographics, and
+                presentations, particularly for our university assignments. Creative work inspires me and allows me to
+                convey ideas in interesting ways. Outside of academe, I'm always trying to become better at something,
+                challenge myself, and remain curious. No matter whether I'm debugging or making slides, I think each
+                detail matters and every project is an opportunity to learn.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- left side -->
+        <div class="left-section">
+            <div class="folders-container" tabindex="0">
+                <!-- folder 1 -->
+                <input type="checkbox" id="folder1" class="folder-toggle" hidden />
+                <label for="folder1" class="folder-shortcut" title="Open Logos' Folder">
+                    📁
+                    <span class="folder-caption">Logos</span>
+                </label>
+                <!-- folder 1 when clicked (pop up)-->
+                <div class="folder-popup" id="popup1" tabindex="0">
+                    <label for="folder1" class="close-btn" title="Close">&times;</label>
+                    <h3>Logos Created</h3>
+                    <div class="image-gallery">
+                        <!--each logo-->
+                        <figure>
+                            <a href="#img1"><img src="crochAceLogo.jpg" alt="crochAceLogo" /></a>
+                            <figcaption>CrochAce's Logo</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="#img2"><img src="sportifyLogo1.jpg" alt="sportifyLogo1" /></a>
+                            <figcaption>Sportify's Logo (version 1)</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="#img3"><img src="sportifyLogo2.jpg" alt="sportifyLogo2" /></a>
+                            <figcaption>Sportify's Logo (version 2)</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="#img4"><img src="internConnectLogo1.jpg" alt="internConnectLogo1" /></a>
+                            <figcaption>InternConnect's Logo (version 1)</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="#img5"><img src="internConnectLogo2.jpg" alt="internConnectLogo2" /></a>
+                            <figcaption>InternConnect's Logo (version 2)</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <!--logo when clicked-->
+                <div class="lightbox" id="img1">
+                    <a href="#popup1" class="close-lightbox">&times;</a>
+                    <img src="crochAceLogo.jpg" alt="crochAceLogo" />
+                </div>
+                <div class="lightbox" id="img2">
+                    <a href="#popup1" class="close-lightbox">&times;</a>
+                    <img src="sportifyLogo1.jpg" alt="sportifyLogo1" />
+                </div>
+                <div class="lightbox" id="img3">
+                    <a href="#popup1" class="close-lightbox">&times;</a>
+                    <img src="sportifyLogo2.jpg" alt="sportifyLogo2" />
+                </div>
+                <div class="lightbox" id="img4">
+                    <a href="#popup1" class="close-lightbox">&times;</a>
+                    <img src="internConnectLogo1.jpg" alt="internConnectLogo1" />
+                </div>
+                <div class="lightbox" id="img5">
+                    <a href="#popup1" class="close-lightbox">&times;</a>
+                    <img src="internConnectLogo2.jpg" alt="internConnectLogo2" />
+                </div>
+                <!-- Folder 2 -->
+                <input type="checkbox" id="folder2" class="folder-toggle" hidden />
+                <label for="folder2" class="folder-shortcut" title="Open Posters' Folder">
+                    📁
+                    <span class="folder-caption">Posters</span>
+                </label>
+                <!--folder 2 when clicked-->
+                <div class="folder-popup" id="popup2" tabindex="0">
+                    <label for="folder2" class="close-btn" title="Close">&times;</label>
+                    <h3>Posters Created</h3>
+                    <input type="radio" name="pdfviewer" id="pdf1" class="pdf-radio" hidden>
+                    <!--pdf thumbnails-->
+                    <div class="pdf-thumbnails">
+                        <label for="pdf1">
+                            <img src="internConnectPoster.jpg" alt="internConnectPoster">
+                            <span>InternConnect's Poster</span>
+                        </label>
+                    </div>
+                    <!--pdf viewer-->
+                    <div class="pdf-embed-area">
+                        <div class="pdf" id="showpdf1">
+                            <embed src="internConnectPoster.pdf" type="application/pdf" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Folder 3 -->
+                <input type="checkbox" id="folder3" class="folder-toggle" hidden />
+                <label for="folder3" class="folder-shortcut" title="Open Presentations' Folder">
+                    📁
+                    <span class="folder-caption">Presentations</span>
+                </label>
+                <!--folder 3 when clicked-->
+                <div class="folder-popup" id="popup3" tabindex="0">
+                    <label for="folder3" class="close-btn" title="Close">&times;</label>
+                    <h3>Presentations Created</h3>
+                    <input type="radio" name="pdfviewer" id="pdf2" class="pdf-radio" hidden>
+                    <input type="radio" name="pdfviewer" id="pdf3" class="pdf-radio" hidden>
+                    <input type="radio" name="pdfviewer" id="pdf4" class="pdf-radio" hidden>
+                    <input type="radio" name="pdfviewer" id="pdf5" class="pdf-radio" hidden>
+                    <input type="radio" name="pdfviewer" id="pdf6" class="pdf-radio" hidden>
+                    <!--pdf thumbnails-->
+                    <div class="pdf-thumbnails">
+                        <label for="pdf2">
+                            <img src="defensePresentation.jpg" alt="defensePresentation">
+                            <span>InternConnect's Defense Presentation</span>
+                        </label>
+                        <label for="pdf3">
+                            <img src="projectPresentation1.jpg" alt="projectPresentation1">
+                            <span>Project Presentation 1</span>
+                        </label>
+                        <label for="pdf4">
+                            <img src="projectPresentation2.jpg" alt="projectPresentation2">
+                            <span>Project Presentation 2</span>
+                        </label>
+                        <label for="pdf5">
+                            <img src="projectPresentation3.jpg" alt="projectPresentation3">
+                            <span>Project Presentation 3</span>
+                        </label><label for="pdf6">
+                            <img src="sipGuidelines.jpg" alt="Sip Guidelines">
+                            <span>SIP Brief Guidelines Prensentation</span>
+                        </label>
+                    </div>
+                    <!--pdf viewer-->
+                    <div class="pdf-embed-area">
+                        <div class="pdf" id="showpdf2">
+                            <embed src="defensePresentation.pdf" type="application/pdf" />
+                        </div>
+                        <div class="pdf" id="showpdf3">
+                            <embed src="projectPresentation1.pdf" type="application/pdf" />
+                        </div>
+                        <div class="pdf" id="showpdf4">
+                            <embed src="projectPresentation2.pdf" type="application/pdf" />
+                        </div>
+                        <div class="pdf" id="showpdf5">
+                            <embed src="projectPresentation3.pdf" type="application/pdf" />
+                        </div>
+                        <div class="pdf" id="showpdf6">
+                            <embed src="sipGuidelines.pdf" type="application/pdf" />
+                        </div>
+                    </div>
+                </div>
+                <!-- folder 4 -->
+                <input type="checkbox" id="folder4" class="folder-toggle" hidden />
+                <label for="folder4" class="folder-shortcut" title="Open Infographics' Folder">
+                    📁
+                    <span class="folder-caption">Infographics</span>
+                </label>
+                <!-- folder 4 when clicked (pop up)-->
+                <div class="folder-popup" id="popup4" tabindex="0">
+                    <label for="folder4" class="close-btn" title="Close">&times;</label>
+                    <h3>Infographics Created</h3>
+                    <!--infographics-->
+                    <div class="image-gallery">
+                        <figure>
+                            <a href="#img6"><img src="infographic1.jpg" alt="infographic1" /></a>
+                            <figcaption>Infographic Project 1</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="#img7"><img src="infographic2SideA.jpg" alt="infographic2SideA" /></a>
+                            <figcaption>Infographic Project 2.1</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="#img8"><img src="infographic2SideB.jpg" alt="infographic2SideB" /></a>
+                            <figcaption>Infographic Project 2.2</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <!--infographics when clicked-->
+                <div class="lightbox" id="img6">
+                    <a href="#popup4" class="close-lightbox">&times;</a>
+                    <img src="infographic1.jpg" alt="infographic1" />
+                </div>
+                <div class="lightbox" id="img7">
+                    <a href="#popup4" class="close-lightbox">&times;</a>
+                    <img src="infographic2SideA.jpg" alt="infographic2SideA" />
+                </div>
+                <div class="lightbox" id="img8">
+                    <a href="#popup4" class="close-lightbox">&times;</a>
+                    <img src="infographic2SideB.jpg" alt="infographic2SideB" />
+                </div>
+                <!-- folder 5 -->
+                
+                <input type="radio" name="videoselect" id="vid1" hidden>
+                <input type="radio" name="videoselect" id="vid2" hidden>
+                <input type="radio" name="videoselect" id="vid3" hidden>
+                <input type="radio" name="videoselect" id="vid4" hidden>
+                <input type="radio" name="videoselect" id="vid5" hidden>
+                <input type="radio" name="videoselect" id="vid6" hidden>
+
+                <input type="checkbox" id="folderVideos" class="folder-toggle" hidden />
+                <label for="folderVideos" class="folder-shortcut" title="Open Edited Videos' Folder">
+                    📁
+                    <span class="folder-caption">Edited Videos</span>
+                </label>
+
+                <!-- Folder popup -->
+                <div class="folder-popup" id="popup5" tabindex="0">
+                    <label for="folderVideos" class="close-btn">&times;</label>
+                    <h3>Edited Videos</h3>
+
+                    <!-- Thumbnails -->
+                    <div class="video-thumbnails">
+                        <label for="vid1">
+                            <img src="ytVid1.png" alt="LIGAYA Music Video">
+                            <span>LIGAYA MV</span>
+                        </label>
+                        <label for="vid2">
+                            <img src="ytVid2.png" alt="BulSU March Music Video">
+                            <span>BulSU March MV</span>
+                        </label>
+                        <label for="vid3">
+                            <img src="ytVid3.png" alt="How to Format a PC (School Project)">
+                            <span>How to Format a PC (School Project)</span>
+                        </label>
+                        <label for="vid4">
+                            <img src="ytVid4.png" alt="Numerical Analysis (School Project)">
+                            <span>Numerical Analysis (School Project)</span>
+                        </label>
+                        <label for="vid5">
+                            <img src="ytVid5.png" alt="InternConnect Promotional Video">
+                            <span>InternConnect Promotional Video</span>
+                        </label>
+                        <label for="vid6">
+                            <img src="ytVid6.png" alt="Grap Theory (School Project)">
+                            <span>Grap Theory (School Project)</span>
+                        </label>
+                    </div>
+
+                    <!-- Video viewers -->
+                    <div class="video-viewer vid1-view">
+                        <label for="none" class="close-video">✖ Close Video</label>
+                        <div class="responsive-iframe">
+                            <iframe src="https://youtu.be/nF3RbgBCZ1E?si=tCOZkpD8lCLilouV" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="video-viewer vid2-view">
+                        <label for="none" class="close-video">✖ Close Video</label>
+                        <div class="responsive-iframe">
+                            <iframe src="https://youtu.be/h7lzo8Q7Qq4?si=v5zyMqAzdgs0u8cc" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="video-viewer vid3-view">
+                        <label for="none" class="close-video">✖ Close Video</label>
+                        <div class="responsive-iframe">
+                            <iframe src="https://youtu.be/CF50cszkiz0?si=3_2UhcPaIkEz1h5Y" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="video-viewer vid4-view">
+                        <label for="none" class="close-video">✖ Close Video</label>
+                        <div class="responsive-iframe">
+                            <iframe src="https://youtu.be/1vQgWmkGB94?si=eUeqUx2RwQNB8wv1" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="video-viewer vid5-view">
+                        <label for="none" class="close-video">✖ Close Video</label>
+                        <div class="responsive-iframe">
+                            <iframe src="https://youtu.be/ntaeTKimCkM?si=N8o0OsBuV0DHuMJf" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="video-viewer vid6-view">
+                        <label for="none" class="close-video">✖ Close Video</label>
+                        <div class="responsive-iframe">
+                            <iframe src="https://youtu.be/fmectkFOmhc?si=23L-u_ZsZUlhkQWV" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="checkbox" id="folder6" class="folder-toggle" hidden />
+                <label for="folder6" class="folder-shortcut" title="Open Logos' Folder">
+                    📁
+                    <span class="folder-caption">Socials</span>
+                </label>
+                <div class="folder-popup" id="popup6" tabindex="0">
+                    <label for="folder6" class="close-btn" title="Close">&times;</label>
+                    <h3>My Socials</h3>
+                    <div class="image-gallery">
+                        <figure>
+                            <a href="https://www.linkedin.com/in/ace-estrella-1a4a88367/"><img src="linkedInLogo.png" alt="LinkedIn Account" /></a>
+                            <figcaption>My LinkedIn Account</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="https://www.facebook.com/acevillanueva.estrella/"><img src="fbLogo.png" alt="Facebook Account" /></a>
+                            <figcaption>My Facebook Account</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+        </div>
+        <div class="right-section">
+            <div class="profile">
+                <div class="curved">
+                    <svg viewBox="0 0 350 110" style="overflow: visible; display: block; margin: 0 auto 5px auto;">
+                        <defs>
+                            <path id="curve" d="M40,90 A140,140 0 0,1 310,90" />
+                        </defs>
+                        <text font-size="26" fill="white" font-weight="bold">
+                            <textPath href="#curve" startOffset="50%" text-anchor="middle">
+                                Ace V. Estrella
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <img src="profilepic.jpg" alt="Ace Estrella's Profile Picture" class="profile-pic" />
+                <div class="info">
+                    <p>Program: Bachelor of Science in Mathematics<br>with Specialization in Computer Science</p>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
